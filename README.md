@@ -1,6 +1,6 @@
 Em parceiria com @joao860 desenvolvemos essa api ruby on rails 
 
-Pub_Escobar
+PUB ESCOBAR
 
 Instalar o Rvm:
 gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB

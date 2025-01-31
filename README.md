@@ -27,3 +27,56 @@ rails -v
 ruby -v
 sudo docker -v
 docker -v
+
+Para criar o projeto, sem as views:
+rails new pub_escobar  --api  
+
+Configurar DB:
+rails db:create
+
+rails db:migrate
+
+rails server
+
+Para criar o modelo do item:
+rails generate model Item pricing:float  name:string    
+ 
+Para gerar o modelo do order: 
+rails generate model Order customer_name:string   
+ 
+Para gerar o modelo do orderItems ja com as chaves estrangeiras:
+rails generate model OrderItems quantity:integer item:references order:references  
+ 
+ Para gerar as rotas
+rails routes   
+ 
+ Gerar o controller dos items:
+rails generate controller Items    
+ 
+ Gerar o controller das orders:
+-rails generate controller Orders   
+ 
+
+Gerar o controller dos ordersItems:
+rails generate controller OrderItems  
+
+Para fazer um post nos items:
+curl -X POST http://localhost:3000/items -H "Content-Type: application/json" -d '{"item": {"name": "Produto A", "pricing": 25.50}}
+rails db:migrate
+
+rails s  para testar
+ 
+ Para instalar as gems configuradas:
+bundle install   
+
+
+Para instalar o rspec: 
+rails generate rspec:install   
+
+rails g rswag:install
+
+rails g rswag:ui:install
+
+rails g rswag:api:install 
+
+touch spec/swagger_helper.rb 
